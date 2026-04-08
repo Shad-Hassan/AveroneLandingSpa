@@ -32,19 +32,34 @@ export default function Hero() {
             <div className="col-span-12 md:col-span-7 flex flex-col gap-4 md:gap-5">
 
               {/* HEADLINE CARD */}
-              <div className="rounded-3xl bg-charcoal border border-platinum/10 p-8 md:p-10 flex-1 flex flex-col justify-between">
-                <p className="text-gray text-xs uppercase tracking-[0.5em] mb-6">
-                  Authority & Precision
-                </p>
-                <h1 className="text-4xl md:text-6xl font-black text-platinum leading-[0.93] tracking-tighter italic uppercase">
+              <div className="rounded-3xl bg-charcoal border border-platinum/10 p-8 md:p-10 flex-1 flex flex-col justify-between gap-8">
+                {/* Top row: eyebrow + enterprise badge */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-platinum/70 animate-pulse shrink-0" />
+                    <p className="text-gray text-[10px] uppercase tracking-[0.5em]">
+                      Authority & Precision
+                    </p>
+                  </div>
+                  <span className="text-[9px] font-bold uppercase tracking-widest text-gray/50 border border-platinum/10 px-3 py-1.5 rounded-full">
+                    Enterprise
+                  </span>
+                </div>
+
+                {/* Headline */}
+                <h1 className="text-4xl md:text-[3.25rem] font-black text-platinum leading-[0.92] tracking-tighter italic uppercase">
                   Stop Guessing.<br />
-                  <span className="text-gray/40">Start Closing.</span>
+                  {/* Gradient fade signals the "answer" to the tension above */}
+                  <span className="bg-linear-to-r from-gray/55 to-gray/15 bg-clip-text text-transparent">
+                    Start Closing.
+                  </span>
                 </h1>
               </div>
 
-              {/* SUBTEXT CARD */}
-              <div className="rounded-3xl border border-platinum/10 px-8 py-6 md:px-10 md:py-7">
-                <p className="text-base md:text-lg text-gray leading-relaxed">
+              {/* SUBTEXT CARD — left accent line anchors it as a supporting beat */}
+              <div className="rounded-3xl border border-platinum/10 px-7 py-6 md:px-9 md:py-7 flex items-stretch gap-6">
+                <div className="w-px bg-platinum/20 rounded-full shrink-0" />
+                <p className="text-base md:text-[1.05rem] text-gray leading-relaxed">
                   The high-precision intelligence layer for Exclusive Live Calls.
                   We don&apos;t just track leads; we automate their outcome.
                 </p>
