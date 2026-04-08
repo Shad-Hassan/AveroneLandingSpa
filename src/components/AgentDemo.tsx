@@ -63,7 +63,7 @@ export default function AgentDemo() {
           </div>
 
           {/* Terminal Content */}
-          <div className="space-y-3 font-mono text-sm sm:text-base">
+          <div className="space-y-3 font-mono text-sm sm:text-base min-h-40">
             {displayedLines.map((line, idx) => (
               <div key={idx} className="text-silver">
                 <span>{line}</span>

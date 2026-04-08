@@ -31,8 +31,9 @@ export default function Hero() {
             {/* RIGHT COLUMN — stacked cards */}
             <div className="col-span-12 md:col-span-7 flex flex-col gap-4 md:gap-5">
 
-              {/* HEADLINE CARD */}
-              <div className="rounded-3xl bg-charcoal border border-platinum/10 p-8 md:p-10 flex-1 flex flex-col justify-between gap-8">
+              {/* HEADLINE CARD — contains eyebrow, headline, subtext, and CTAs */}
+              <div className="rounded-3xl bg-charcoal border border-platinum/10 p-8 md:p-10 flex-1 flex flex-col gap-8">
+
                 {/* Top row: eyebrow + enterprise badge */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
@@ -49,52 +50,49 @@ export default function Hero() {
                 {/* Headline */}
                 <h1 className="text-4xl md:text-[3.25rem] font-black text-platinum leading-[0.92] tracking-tighter italic uppercase">
                   Stop Guessing.<br />
-                  {/* Gradient fade signals the "answer" to the tension above */}
                   <span className="bg-linear-to-r from-gray/55 to-gray/15 bg-clip-text text-transparent">
                     Start Closing.
                   </span>
                 </h1>
-              </div>
 
-              {/* SUBTEXT CARD — left accent line anchors it as a supporting beat */}
-              <div className="rounded-3xl border border-platinum/10 px-7 py-6 md:px-9 md:py-7 flex items-stretch gap-6">
-                <div className="w-px bg-platinum/20 rounded-full shrink-0" />
-                <p className="text-base md:text-[1.05rem] text-gray leading-relaxed">
-                  The high-precision intelligence layer for Exclusive Live Calls.
-                  We don&apos;t just track leads; we automate their outcome.
-                </p>
-              </div>
-
-              {/* CTA CARDS — moving border via rotating conic-gradient wrapper */}
-              <div className="grid grid-cols-2 gap-4 md:gap-5">
-
-                {/* Primary — brighter sweep, phase 0 */}
-                <div
-                  className="col-span-1 rounded-2xl p-px"
-                  style={{
-                    background: "conic-gradient(from var(--border-angle), transparent 20%, rgba(255,255,255,0.9) 50%, transparent 80%)",
-                    animation: "border-rotate 3.5s linear infinite",
-                  }}
-                >
-                  <button className="w-full px-6 py-5 bg-black text-platinum font-bold uppercase tracking-widest text-[10px] rounded-[15px] hover:bg-white/5 active:scale-95 transition-all duration-200">
-                    Initialize Guardian
-                  </button>
+                {/* Subtext */}
+                <div className="flex items-stretch gap-5">
+                  <div className="w-px bg-platinum/20 rounded-full shrink-0" />
+                  <p className="text-sm md:text-base text-gray leading-relaxed">
+                    The high-precision intelligence layer for Exclusive Live Calls.
+                    We don&apos;t just track leads; we automate their outcome.
+                  </p>
                 </div>
 
-                {/* Secondary — dimmer sweep, offset half-cycle so they're out of phase */}
-                <div
-                  className="col-span-1 rounded-2xl p-px"
-                  style={{
-                    background: "conic-gradient(from var(--border-angle), transparent 20%, rgba(255,255,255,0.35) 50%, transparent 80%)",
-                    animation: "border-rotate 3.5s linear infinite",
-                    animationDelay: "-1.75s",
-                  }}
-                >
-                  <button className="w-full px-6 py-5 bg-charcoal text-platinum font-bold uppercase tracking-widest text-[10px] rounded-[15px] hover:bg-white/5 transition-all duration-200">
-                    Learn More
-                  </button>
-                </div>
+                {/* CTAs — pinned to the bottom of the card */}
+                <div className="grid grid-cols-2 gap-3 mt-auto">
 
+                  <div
+                    className="col-span-1 rounded-2xl p-px"
+                    style={{
+                      background: "conic-gradient(from var(--border-angle), transparent 20%, rgba(255,255,255,0.9) 50%, transparent 80%)",
+                      animation: "border-rotate 3.5s linear infinite",
+                    }}
+                  >
+                    <button className="w-full px-6 py-4 bg-black text-platinum font-bold uppercase tracking-widest text-[10px] rounded-[15px] hover:bg-white/5 active:scale-95 transition-all duration-200">
+                      Initialize Guardian
+                    </button>
+                  </div>
+
+                  <div
+                    className="col-span-1 rounded-2xl p-px"
+                    style={{
+                      background: "conic-gradient(from var(--border-angle), transparent 20%, rgba(255,255,255,0.35) 50%, transparent 80%)",
+                      animation: "border-rotate 3.5s linear infinite",
+                      animationDelay: "-1.75s",
+                    }}
+                  >
+                    <button className="w-full px-6 py-4 bg-charcoal text-platinum font-bold uppercase tracking-widest text-[10px] rounded-[15px] hover:bg-white/5 transition-all duration-200">
+                      Learn More
+                    </button>
+                  </div>
+
+                </div>
               </div>
 
             </div>
