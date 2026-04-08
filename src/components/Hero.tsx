@@ -13,7 +13,7 @@ export default function Hero() {
             {/* MASCOT CARD — left column, dominant */}
             {/* overflow-visible lets the mascot break out of the card boundary.
                 z-10 ensures the overflow renders above the grid gap and sibling cards. */}
-            <div className="col-span-12 md:col-span-5 relative rounded-3xl bg-charcoal border border-platinum/10 overflow-visible min-h-72 md:min-h-160 z-10">
+            <div className="col-span-12 md:col-span-5 relative rounded-3xl overflow-visible min-h-72 md:min-h-160 z-10">
               {/* ambient glow behind the mascot */}
               <div className="absolute inset-0 rounded-3xl flex items-center justify-center pointer-events-none overflow-hidden">
                 <div className="w-96 h-96 rounded-full bg-white/[0.07] blur-3xl" />
@@ -24,7 +24,7 @@ export default function Hero() {
                 alt="Averon Guardian Mascot"
                 className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[125%] h-auto object-contain select-none pointer-events-none
                            drop-shadow-[0_0_120px_rgba(245,245,247,0.35)]"
-                style={{ filter: "brightness(1.15) contrast(1.08)" }}
+                
               />
             </div>
 
@@ -50,14 +50,36 @@ export default function Hero() {
                 </p>
               </div>
 
-              {/* CTA CARDS */}
+              {/* CTA CARDS — moving border via rotating conic-gradient wrapper */}
               <div className="grid grid-cols-2 gap-4 md:gap-5">
-                <button className="col-span-1 px-6 py-5 bg-platinum text-black font-bold uppercase tracking-widest text-[10px] rounded-2xl hover:scale-[1.02] active:scale-95 transition-all duration-200 shadow-[0_0_30px_rgba(255,255,255,0.08)]">
-                  Initialize Guardian
-                </button>
-                <button className="col-span-1 px-6 py-5 bg-transparent text-platinum font-bold uppercase tracking-widest text-[10px] rounded-2xl border border-platinum/20 hover:bg-white/5 transition-all duration-200">
-                  Learn More
-                </button>
+
+                {/* Primary — brighter sweep, phase 0 */}
+                <div
+                  className="col-span-1 rounded-2xl p-px"
+                  style={{
+                    background: "conic-gradient(from var(--border-angle), transparent 20%, rgba(255,255,255,0.9) 50%, transparent 80%)",
+                    animation: "border-rotate 3.5s linear infinite",
+                  }}
+                >
+                  <button className="w-full px-6 py-5 bg-black text-platinum font-bold uppercase tracking-widest text-[10px] rounded-[15px] hover:bg-white/5 active:scale-95 transition-all duration-200">
+                    Initialize Guardian
+                  </button>
+                </div>
+
+                {/* Secondary — dimmer sweep, offset half-cycle so they're out of phase */}
+                <div
+                  className="col-span-1 rounded-2xl p-px"
+                  style={{
+                    background: "conic-gradient(from var(--border-angle), transparent 20%, rgba(255,255,255,0.35) 50%, transparent 80%)",
+                    animation: "border-rotate 3.5s linear infinite",
+                    animationDelay: "-1.75s",
+                  }}
+                >
+                  <button className="w-full px-6 py-5 bg-charcoal text-platinum font-bold uppercase tracking-widest text-[10px] rounded-[15px] hover:bg-white/5 transition-all duration-200">
+                    Learn More
+                  </button>
+                </div>
+
               </div>
 
             </div>

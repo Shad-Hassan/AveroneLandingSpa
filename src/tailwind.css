@@ -37,3 +37,15 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* Moving border — animates a CSS custom property so the conic-gradient
+   rotates smoothly. @property is required for this to interpolate. */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes border-rotate {
+  to { --border-angle: 360deg; }
+}
