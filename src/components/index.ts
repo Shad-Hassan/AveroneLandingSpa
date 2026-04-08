@@ -1,0 +1,6 @@
+export { default as Hero } from './Hero'
+export { default as Metrics } from './Metrics'
+export { default as AgentDemo } from './AgentDemo'
+export { default as ScalabilityGrid } from './ScalabilityGrid'
+export { default as CallToAction } from './CallToAction'
+export { default as Contact } from './Contact'
