@@ -55,15 +55,6 @@ export default function Hero() {
                   </span>
                 </h1>
 
-                {/* Subtext */}
-                <div className="flex items-stretch gap-5">
-                  <div className="w-px bg-platinum/20 rounded-full shrink-0" />
-                  <p className="text-sm md:text-base text-gray leading-relaxed">
-                    The high-precision intelligence layer for Exclusive Live Calls.
-                    We don&apos;t just track leads; we automate their outcome.
-                  </p>
-                </div>
-
                 {/* CTAs — pinned to the bottom of the card */}
                 <div className="grid grid-cols-2 gap-3 mt-auto">
 
@@ -93,6 +84,27 @@ export default function Hero() {
                   </div>
 
                 </div>
+              </div>
+
+              {/* SUBTEXT CARD — dot-grid texture fills the negative space */}
+              <div className="rounded-3xl border border-platinum/10 px-7 py-6 md:px-9 md:py-7 flex items-center gap-6 relative overflow-hidden">
+                {/* Dot grid SVG texture */}
+                <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern id="dot-grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                      <circle cx="1.5" cy="1.5" r="1" fill="rgba(255,255,255,0.06)" />
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#dot-grid)" />
+                </svg>
+
+                {/* Left accent */}
+                <div className="w-px self-stretch bg-platinum/25 rounded-full shrink-0 relative z-10" />
+
+                <p className="text-sm md:text-base text-gray leading-relaxed relative z-10">
+                  The high-precision intelligence layer for Exclusive Live Calls.
+                  We don&apos;t just track leads; we automate their outcome.
+                </p>
               </div>
 
             </div>
