@@ -41,8 +41,8 @@ export default function Metrics() {
 
       <div className="relative mx-auto max-w-4xl">
         <div className="flex flex-col items-center justify-center gap-8 text-center">
-          <div className="font-mono text-6xl font-semibold text-silver drop-shadow-[0_0_32px_rgba(245,245,247,0.1)] sm:text-7xl lg:text-8xl">
-            <div ref={countRef}>$0.00</div>
+          <div className="font-mono text-4xl font-semibold text-silver drop-shadow-[0_0_32px_rgba(245,245,247,0.1)] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <div ref={countRef} className="whitespace-nowrap">$0.00</div>
           </div>
 
           <p className="max-w-2xl text-base leading-relaxed text-gray sm:text-lg">
